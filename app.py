@@ -306,7 +306,7 @@ SYMBOLS = ["square", "triangle-up", "diamond", "pentagon", "hexagon",
            "triangle-down", "octagon", "star"]
 LOVE_PALETTE = ["#ff8fb8", "#b794f4", "#7dd3fc", "#ffc27a", "#7ee0c8", "#f6a6d6", "#b5e07a", "#ffa98a", "#9fa8ff", "#ff9a9a"]
 FORMAL_PALETTE = ["#8fb1d1", "#f2b880", "#9dc99a", "#e59a9c", "#a7cfcb", "#c5a9cf", "#c3a58f", "#ecd88a", "#f2bfc6", "#b8b8b8"]
-MODERN_PALETTE = ["#8ea7ff", "#7fd1e8", "#8fd9b6", "#c3a6f5", "#f5a9d0", "#7ed6cf", "#aab4c8", "#b7d56f", "#e0b4e8", "#9db7e8"]
+MODERN_PALETTE = ["#7b9be0", "#6fbfb5", "#8cc58f", "#a58bd1", "#d58fb0", "#93a1b8", "#aac47a", "#8e97d9", "#c19ac9", "#7fb7d6"]
 EMOJIS = ["💖", "🌟", "🍀", "🦋", "🌸", "🐱", "🍓", "☁️", "🌈", "🍭"]
 
 
@@ -361,14 +361,14 @@ body.love{--bg:#fff5fa;--txt:#4a1d44;--card:#ffffff;--head:linear-gradient(90deg
 body.formal{--bg:#ffffff;--txt:#1f2937;--card:#ffffff;--head:#f3f4f6;--line:#d1d5db;
  --accent:#1e3a8a;--sub:#4b5563;--btn:#f9fafb;--btnh:#e5e7eb;--btnline:#9ca3af;--outline:#ffffff;
  --stage:#fbfbfc;--acc2:#1e3a8a;--play:#1e3a8a;--playline:#1e3a8a;--chip:#1f2937;--legbg:rgba(255,255,255,.96)}
-body.modern{--bg:#f6f7fb;--txt:#1e2a44;--card:#ffffff;--head:linear-gradient(90deg,#eef2ff,#f5f3ff);--line:#dfe3f0;
- --accent:#4f46e5;--sub:#5b6785;--btn:#ffffff;--btnh:#eef2ff;--btnline:#cfd6ea;--outline:#ffffff;
- --stage:#f3f5ff;--acc2:#4f46e5;
- --play:linear-gradient(135deg,#6366f1,#4f46e5);--playline:#a5b4fc;--chip:#3730a3;--legbg:rgba(255,255,255,.92)}
+body.modern{--bg:#ffffff;--txt:#243049;--card:#ffffff;--head:#f1f5fb;--line:#dbe2ee;
+ --accent:#34558b;--sub:#5d6b85;--btn:#ffffff;--btnh:#eef3fa;--btnline:#c9d3e3;--outline:#ffffff;
+ --stage:#f8fafd;--acc2:#34558b;
+ --play:#34558b;--playline:#34558b;--chip:#243049;--legbg:rgba(255,255,255,.96)}
 html,body{margin:0;height:100%;background:var(--bg);font-family:"Segoe UI",Roboto,Arial,sans-serif;color:var(--txt)}
 #app{display:flex;flex-direction:column;height:100vh;gap:8px}
 #head{padding:9px 14px;border-radius:12px;background:var(--head);
-  border:1px solid var(--line);font-size:14px;line-height:1.35;min-height:40px}
+  border:1px solid var(--line);font-size:15px;line-height:1.4;min-height:42px}
 #head b{color:var(--accent)}
 #stage{position:relative;flex:1;min-height:220px;border-radius:16px;overflow:hidden;
   border:1px solid var(--line);background:var(--stage)}
@@ -377,7 +377,7 @@ svg{position:relative;z-index:1;width:100%;height:100%;display:block;cursor:grab
 #decor span{position:absolute;bottom:-40px;opacity:.4;animation:fl linear infinite}
 @keyframes fl{0%{transform:translateY(0) rotate(0)}100%{transform:translateY(-900px) rotate(30deg);opacity:0}}
 #leg{position:absolute;top:10px;left:10px;background:var(--legbg);border:1px solid var(--line);
-  border-radius:12px;padding:6px 10px;font-size:12px;max-height:74%;overflow:auto;z-index:3}
+  border-radius:12px;padding:6px 10px;font-size:13px;max-height:74%;overflow:auto;z-index:3}
 #leg summary{cursor:pointer;font-weight:600;color:var(--sub)}
 #leg .it{display:flex;align-items:center;gap:7px;margin:5px 0;white-space:nowrap}
 #tools{position:absolute;top:10px;right:10px;display:flex;gap:6px;z-index:3}
@@ -385,7 +385,7 @@ button,select{font:inherit;color:var(--txt);background:var(--btn);border:1px sol
   padding:6px 11px;cursor:pointer}
 button:hover{background:var(--btnh)}
 #panel{display:none;gap:6px;flex-direction:column;padding:8px 12px;border-radius:12px;background:var(--card);
-  border:1px solid var(--line);font-size:12.5px}
+  border:1px solid var(--line);font-size:13.5px}
 .row{display:flex;align-items:center;gap:6px;overflow-x:auto;white-space:nowrap;padding-bottom:2px}
 .row .lab{color:var(--sub);font-weight:600;min-width:120px}
 .chip{display:inline-block;padding:2px 9px;border-radius:999px;border:1.5px solid #ffc531;color:var(--chip);
@@ -411,7 +411,7 @@ button:hover{background:var(--btnh)}
 .ripple{fill:none;stroke:#f27b7b;stroke-width:3;transform-box:fill-box;transform-origin:center;animation:rip .95s ease-out forwards}
 @keyframes pul{0%{transform:scale(1);opacity:.95}100%{transform:scale(2);opacity:0}}
 @keyframes rip{0%{transform:scale(1);opacity:.95}100%{transform:scale(3.6);opacity:0}}
-.clab{font-size:12.5px;font-weight:700;paint-order:stroke;stroke:var(--outline);stroke-width:3px;text-anchor:middle}
+.clab{font-size:13.5px;font-weight:700;paint-order:stroke;stroke:var(--outline);stroke-width:3px;text-anchor:middle}
 </style></head>
 <body><div id="app">
  <div id="head"></div>
@@ -473,7 +473,7 @@ const C_UN = LOVE ? "#f0dcef" : FORMAL ? "#e5e7eb" : MODERN ? "#e2e8f0" : "#3b4a
   C_UN_S = LOVE ? "#cfa3cc" : FORMAL ? "#9ca3af" : MODERN ? "#94a3b8" : "#8fa3c4",
   C_FR = LOVE ? "#ffd77a" : FORMAL ? "#f7c873" : MODERN ? "#fcd979" : "#ffd166",
   C_CUR = LOVE ? "#ff5c7c" : FORMAL ? "#e66b6b" : MODERN ? "#f27b7b" : "#ff4d6d",
-  EDGE = LOVE ? "#e9a9cf" : FORMAL ? "#9ca3af" : MODERN ? "#c3cbe0" : "#3a4d78";
+  EDGE = LOVE ? "#e9a9cf" : FORMAL ? "#9ca3af" : MODERN ? "#c3cad8" : "#3a4d78";
 const HEART = "M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z";
 const PRE = LOVE ? "💞 " : "";
 let W = 800, H = 560, P = {}, R0 = 12, step = 0, playing = false, timer = null, mult = 1;
@@ -534,10 +534,10 @@ function build() {
   el("feGaussianBlur", {stdDeviation: "3.6", result: "b"}, f);
   const m = el("feMerge", {}, f); el("feMergeNode", {in: "b"}, m); el("feMergeNode", {in: "SourceGraphic"}, m);
   const sh = el("filter", {id: "soft", x: "-40%", y: "-40%", width: "180%", height: "180%"}, defs);
-  el("feDropShadow", {dx: 0, dy: 2, stdDeviation: 2.6, "flood-color": "#1e2a44", "flood-opacity": 0.28}, sh);
+  el("feDropShadow", {dx: 0, dy: 2, stdDeviation: 2.6, "flood-color": "#1f2937", "flood-opacity": 0.18}, sh);
   const pat = el("pattern", {id: "grid", width: 42, height: 42, patternUnits: "userSpaceOnUse"}, defs);
   if (LOVE) el("circle", {cx: 21, cy: 21, r: 1.6, fill: "#f6b8d8", opacity: 0.8}, pat);
-  else if (MODERN) el("path", {d: "M42 0H0V42", fill: "none", stroke: "#e1e6f7", "stroke-width": 1, opacity: 0.8}, pat);
+  else if (MODERN) el("path", {d: "M42 0H0V42", fill: "none", stroke: "#e8edf6", "stroke-width": 1, opacity: 1}, pat);
   else el("path", {d: "M42 0H0V42", fill: "none", stroke: FORMAL ? "#eceff3" : "#18294a", "stroke-width": 1}, pat);
   el("rect", {width: "100%", height: "100%", fill: "url(#grid)"}, svg);
   world = el("g", {}, svg);
@@ -602,9 +602,9 @@ function build() {
       spk = el("path", {class: "spk", d: "M0,-5.5 L1.4,-1.4 L5.5,0 L1.4,1.4 L0,5.5 L-1.4,1.4 L-5.5,0 L-1.4,-1.4 Z", fill: "#ffffff"}, sg);
       spk.style.animationDelay = (-Math.random() * 2.6) + "s"; spk.style.display = "none";
     }
-    const lab = el("text", {y: -r * 1.55 - 4, "text-anchor": "middle", fill: LOVE ? "#4a1d44" : FORMAL ? "#111827" : MODERN ? "#1e2a44" : "#fff", "font-size": 13}, g);
+    const lab = el("text", {y: -r * 1.55 - 4, "text-anchor": "middle", fill: LOVE ? "#4a1d44" : FORMAL ? "#111827" : MODERN ? "#243049" : "#fff", "font-size": 14}, g);
     lab.textContent = n.id;
-    const sub = el("text", {y: r * 1.55 + 13, "text-anchor": "middle", fill: LOVE ? "#a0548a" : FORMAL ? "#4b5563" : MODERN ? "#64748b" : "#ffd166", "font-size": 11}, g);
+    const sub = el("text", {y: r * 1.55 + 13, "text-anchor": "middle", fill: LOVE ? "#a0548a" : FORMAL ? "#4b5563" : MODERN ? "#5d6b85" : "#ffd166", "font-size": 12}, g);
     sub.textContent = "d=" + n.deg;
     nodeEls[n.id] = {g, halo, ring, body, shape, emo, lab, sub, r, spk};
   });
@@ -752,7 +752,7 @@ function legend() {
   if (D.bridges.length) item(`<line x1="-9" y1="0" x2="9" y2="0" stroke="${BRIDGE}" stroke-width="4.5"/>`, "Jembatan");
   if (D.added.length) item(`<line x1="-9" y1="0" x2="9" y2="0" stroke="${ADD}" stroke-width="4"/>`, "Hubungan baru");
   if (D.removed.length) item(`<line x1="-9" y1="0" x2="9" y2="0" stroke="${REM}" stroke-width="3" stroke-dasharray="4 3"/>`, "Hubungan dihapus");
-  const d = document.createElement("div"); d.style.cssText = "color:#8aa0cf;margin-top:4px"; d.textContent = "d = derajat (jumlah hubungan)"; b.appendChild(d);
+  const d = document.createElement("div"); d.style.cssText = "color:var(--sub);margin-top:4px"; d.textContent = "d = derajat (jumlah hubungan)"; b.appendChild(d);
 }
 function go(k, fx) { step = Math.max(0, Math.min(N, k)); $("slider").value = step; render(step, fx); }
 function stop() { playing = false; clearTimeout(timer); $("play").textContent = "▶"; }
@@ -903,7 +903,7 @@ import streamlit as st
 import streamlit.components.v1 as components
 
 
-VERSI = "v15 · ringkasan jumlah kelompok di animasi"
+VERSI = "v17 · tampilan tenang dan profesional"
 st.set_page_config(page_title="Community Connection Lab", layout="wide")
 
 
@@ -947,9 +947,9 @@ with st.sidebar:
     speed = st.slider("Jeda dasar animasi (ms/langkah)", 300, 2500, 1000, 100,
                       help="Kecepatan juga bisa diubah langsung di pemutar (0.5× – 3×).")
     autoplay = st.checkbox("Putar animasi otomatis saat dibuka", value=True)
-    spasi = st.slider("Kerenggangan titik", 0.4, 2.5, 1.2, 0.1,
+    spasi = st.slider("Kerenggangan titik", 0.4, 2.5, 1.4, 0.1,
                       help="Makin besar, makin renggang jarak antar titik.")
-    ukuran = st.slider("Ukuran titik", 0.5, 1.6, 1.0, 0.1)
+    ukuran = st.slider("Ukuran titik", 0.5, 1.6, 1.1, 0.1)
     aman = st.checkbox("Mode cadangan (tanpa JavaScript)", value=False,
                        help="Aktifkan bila grafik tampil kosong. Grafik digambar langsung oleh Streamlit.")
 
@@ -978,7 +978,6 @@ with st.sidebar:
     for _, _, _, pesan, _ in st.session_state.log:
         st.caption("• " + pesan)
     st.divider()
-    st.caption(f"Tampilan {VERSI}")
     with st.expander("Info teknis"):
         st.code(__file__)
 
@@ -1003,8 +1002,7 @@ def show(G, comps, title, height, **kw):
 
 
 if THEME in ("formal", "modern"):
-    _h1 = ("background:linear-gradient(90deg,#4f46e5,#0ea5e9);-webkit-background-clip:text;"
-           "-webkit-text-fill-color:transparent;" if THEME == "modern" else "")
+    _h1 = "color:#2b4670;"
     st.markdown(f"<h1 style='margin-bottom:0;{_h1}'>Community Connection Lab</h1>"
                 "<p style='font-size:1.05rem;margin-top:2px'>Analisis Komponen Terhubung pada Jaringan "
                 "Pertemanan menggunakan Algoritma BFS dan DFS</p>", unsafe_allow_html=True)
@@ -1016,7 +1014,7 @@ else:
         f"<h1 style='background:{_grad};-webkit-background-clip:text;"
         f"-webkit-text-fill-color:transparent;margin-bottom:0'>{_judul}</h1>", unsafe_allow_html=True)
 st.caption(f"Ubah hubungan pertemanan, lalu amati kelompok yang bergabung atau terpisah. "
-           f"Algoritma: BFS & DFS. · Tampilan {VERSI}")
+           f"Algoritma: BFS & DFS.")
 
 tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
     "1 · Model & data", "2 · Kelompok & derajat", "3 · Sebelum vs sesudah",
@@ -1042,6 +1040,14 @@ with tab1:
     c3.metric("Kelompok awal", len(comps0))
     st.dataframe(pd.DataFrame(sorted(G0.edges, key=str), columns=["Titik A", "Titik B"]),
                  use_container_width=True, height=250)
+    with st.expander("Alur presentasi yang disarankan"):
+        st.markdown("""
+1. **Model dan data** (tab ini): jelaskan arti titik dan sisi, sumber data, serta batasannya.
+2. **Animasi** (tab 4): jalankan BFS, lalu DFS. Tunjukkan titik awal, titik terakhir, dan kelompok yang tumbuh.
+3. **Kelompok dan derajat** (tab 2): tunjukkan jembatan (oranye) dan titik berderajat tertinggi.
+4. **Ubah satu hubungan** di sidebar, lalu buka **Sebelum vs sesudah** (tab 3).
+5. **Validasi dan tafsir** (tab 5): tunjukkan semua centang hijau dan batas kesimpulan.
+""")
 
 # ---------------------------------------------------------------- Tab 2
 with tab2:
@@ -1168,3 +1174,6 @@ with tab6:
 ### Jembatan
 Sisi yang jika dihapus menambah jumlah kelompok. Pada graf tak berarah, sisi adalah jembatan jika tidak berada pada siklus apa pun.
 """)
+
+st.divider()
+st.caption("Sumber data: " + st.session_state.info["sumber"])
